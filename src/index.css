@@ -1,46 +1,121 @@
+@font-face {
+    font-family: "NirvanaFont";
+    src: url("assets/fonts/OPTIOnyx.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
 
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
     background-color: black;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: "NirvanaFont", serif;
 }
 
+/* HEADER */
+.header {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* BACKGROUND VIDEO */
+.video-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.1418); /* expands left & right */
+    object-position: center;
+    z-index: 0;
+}
+
+/* DARK OVERLAY FOR READABILITY */
+.header::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 1;
+}
+
+/* NAVBAR */
 .nav-bar {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     right: 0;
-    background-color: black;
-    z-index: 1000;
     padding: 15px 0;
+    background: transparent;
+    z-index: 3;
 }
 
+/* NAV LIST */
 .nav-bar ul {
+    position: relative;          /* REQUIRED */
     display: flex;
+    justify-content: flex-end;   /* keep menu on right */
+    align-items: center;
     list-style: none;
-    color: rgb(251, 135, 94);
-    justify-content: space-between;
 }
 
+
+/* LEFT LOGO */
 .nav-left {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 16px;
-    margin-left: 40px;
-    margin-top: 8px;
+    position: absolute;
+    top: 15px;
+    left: 50px;
+}
+
+.nav-logo {
+    height: 59.5px;
+    width: auto;
     cursor: pointer;
 }
 
+
+/* RIGHT MENU */
 .nav-right {
+    position: relative;
+    top: 38px;                     /* subtle vertical drop */
     display: flex;
     align-items: center;
-    gap: 32px;
-    margin-right: 15px;
-    margin-top: 8px;
+    gap: 26px;                    /* slightly wider spacing */
+    margin-right: 62px;
     cursor: pointer;
+
+    color: rgb(116, 116, 116); /* softer, lighter tone */
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;              /* slightly smaller */
+    font-weight: -400;
+    letter-spacing: 0.111em;       /* CRITICAL: matches official site */
+    text-transform: uppercase;
 }
+
+.nav-right span:hover {
+   color: #E1AD01;
+   transition: color 0.7s ease;
+}
+
+/* CENTER NIRVANA LOGO */
+.center-logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    pointer-events: none; /* prevents interaction */
+    margin-top: 2px;
+}
+
+.center-logo img {
+    height: 108px;      /* matches official site scale */
+    width: auto;
+}
+
