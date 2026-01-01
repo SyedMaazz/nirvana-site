@@ -1,227 +1,269 @@
 @font-face {
-    font-family: "NirvanaFont";
-    src: url("assets/fonts/Nirvana.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal;
+  font-family: "NirvanaFont";
+  src: url("assets/fonts/Nirvana.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: "HelveticaNeueBold";
-    src: url("assets/fonts/HelveticaNeueBold.otf") format("opentype");
-    font-weight: bold;
-    font-style: normal;
+  font-family: "HelveticaNeueBold";
+  src: url("assets/fonts/HelveticaNeueBold.otf") format("opentype");
+  font-weight: bold;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: "HelveticaNeueLight";
-    src: url("assets/fonts/HelveticaNeueLight.otf") format("opentype");
-    font-weight: 300;
-    font-style: normal;
+  font-family: "HelveticaNeueLight";
+  src: url("assets/fonts/HelveticaNeueLight.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: "HelveticaNeueMedium";
-    src: url("assets/fonts/HelveticaNeueMedium.otf") format("opentype");
-    font-weight: 500;
-    font-style: normal;
+  font-family: "HelveticaNeueMedium";
+  src: url("assets/fonts/HelveticaNeueMedium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background-color: black;
-    font-family: "NirvanaFont", serif;
+  background-color: black;
+  font-family: "NirvanaFont", serif;
 }
 
 /* HEADER */
 .header {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
 }
 
 /* BACKGROUND VIDEO */
 .video-bg {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transform: scale(1.1418); /* expands left & right */
-    object-position: center;
-    z-index: 0;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.1418); /* expands left & right */
+  object-position: center;
+  z-index: 0;
 }
 
 /* DARK OVERLAY FOR READABILITY */
 .header::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.45);
-    z-index: 1;
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 1;
 }
 
 /* NAVBAR */
 .nav-bar {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    padding: 15px 0;
-    background: transparent;
-    z-index: 3;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 15px 0;
+  background: transparent;
+  z-index: 3;
 }
 
 /* NAV LIST */
 .nav-bar ul {
-    position: relative;          /* REQUIRED */
-    display: flex;
-    justify-content: flex-end;   /* keep menu on right */
-    align-items: center;
-    list-style: none;
+  position: relative; /* REQUIRED */
+  display: flex;
+  justify-content: flex-end; /* keep menu on right */
+  align-items: center;
+  list-style: none;
 }
-
 
 /* LEFT LOGO */
 .nav-left {
-    position: absolute;
-    top: 15px;
-    left: 50px;
+  position: absolute;
+  top: 15px;
+  left: 50px;
 }
 
 .nav-logo {
-    height: 59.5px;
-    width: auto;
-    cursor: pointer;
+  height: 59.5px;
+  width: auto;
+  cursor: pointer;
 }
-
 
 /* RIGHT MENU */
 .nav-right {
-    position: relative;
-    top: 38px;                     /* subtle vertical drop */
-    display: flex;
-    align-items: center;
-    gap: 26px;                    /* slightly wider spacing */
-    margin-right: 62px;
-    cursor: pointer;
+  position: relative;
+  top: 38px; /* subtle vertical drop */
+  display: flex;
+  align-items: center;
+  gap: 26px; /* slightly wider spacing */
+  margin-right: 62px;
+  cursor: pointer;
 
-    color: rgb(116, 116, 116); /* softer, lighter tone */
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 12px;              /* slightly smaller */
-    font-weight: -400;
-    letter-spacing: 0.111em;       /* CRITICAL: matches official site */
-    text-transform: uppercase;
+  color: rgb(116, 116, 116); /* softer, lighter tone */
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px; /* slightly smaller */
+  font-weight: -400;
+  letter-spacing: 0.111em; /* CRITICAL: matches official site */
+  text-transform: uppercase;
 }
 
 .nav-right span:hover {
-   color: #E1AD01;
-   transition: color 0.7s ease;
+  color: #e1ad01;
+  transition: color 0.7s ease;
 }
 
 /* CENTER NIRVANA LOGO */
 .center-logo {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
-    pointer-events: none; /* prevents interaction */
-    margin-top: 2px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  pointer-events: none; /* prevents interaction */
+  margin-top: 2px;
 }
 
 .center-logo img {
-    height: 108px;      /* matches official site scale */
-    width: auto;
+  height: 108px; /* matches official site scale */
+  width: auto;
 }
 
 /* DISCOGRAPHY STRIP */
 .discography-strip {
-    width: 100%;
-    height: 146px;
-    background-color: rgb(248, 184, 34); /* Nirvana yellow */
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 50px;
+  width: 100%;
+  height: 146px;
+  background-color: rgb(248, 184, 34); /* Nirvana yellow */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
 }
 
 /* LEFT TITLE */
 .discography-title {
-    font-family: "NirvanaFont", serif; /* Onyx-style font */
-    font-size: 60px;
-    font-weight: 500;
-    color: #000;
-    text-transform: uppercase;
-    letter-spacing: 0.01px;
+  font-family: "NirvanaFont", serif; /* Onyx-style font */
+  font-size: 60px;
+  font-weight: 500;
+  color: #000;
+  text-transform: uppercase;
+  letter-spacing: 0.01px;
 }
 
 /* RIGHT BUTTON */
 .see-all-btn {
-    background-color: #000;
-    color: #f8b822;
-    border: none;
-    border-radius: 18px;
-    padding: 6px 9px;
-    font-size: 14px;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    cursor: pointer;
-    margin-right: 1px;
-    font-family: "HelveticaNeueLight", sans-serif;
+  background-color: #000;
+  color: #f8b822;
+  border: none;
+  border-radius: 18px;
+  padding: 6px 9px;
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-right: 1px;
+  font-family: "HelveticaNeueLight", sans-serif;
 }
 
 /* SUBTLE HOVER (OPTIONAL) */
 .see-all-btn:hover {
-    background-color: #684e12;
-    transition: background-color 0.4s ease; 
+  background-color: #684e12;
+  transition: background-color 0.4s ease;
 }
 
 /* ALBUM GRID CONTAINER */
 .albums-container {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    width: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  width: 100%;
 }
 
 /* EACH ALBUM CARD */
 .album-card {
-    position: relative;
-    aspect-ratio: 1 / 1;
-    overflow: hidden;
-    background-color: #0a0a0a; /* REQUIRED for white border effect */
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  position: relative;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  background-color: #0a0a0a; /* REQUIRED for white border effect */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
 
 /* COVER IMAGE */
 .album-card img {
-    width: 100%;
-    height: 100%;
-    display: block;
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 
-
 .album-card.paramount img {
-    object-fit: contain;
-    transform: scaleX(1);
+  object-fit: contain;
+  transform: scaleX(1);
 }
 
 .album-card.reading img {
-    object-fit: contain;
-    transform: scaleX(1);
+  object-fit: contain;
+  transform: scaleX(1);
 }
 
 .album-card.unpluggedNY img {
-    object-fit: contain;
-    transform: scaleX(1);
+  object-fit: contain;
+  transform: scaleX(1);
 }
 
+/* MERCH SECTION */
+.merch-section {
+  background-color: #000;
+  padding: 9.5px 20px 24px; /* CRITICAL: official spacing */
+}
 
+/* MERCH GRID */
+.merch-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: start;
+  gap: 40px;
+  margin: 0 auto;
+}
+
+/* EACH MERCH ITEM */
+.merch-item {
+  text-align: center;
+}
+
+/* MERCH IMAGE */
+.merch-item img {
+  max-width: 340px;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* MERCH TITLE */
+.merch-title {
+  font-family: "HelveticaNeuelight";
+  font-size: 14px;
+  letter-spacing: 1.1px;
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  font-weight: 250 !important;
+}
+
+/* MERCH PRICE */
+.merch-price {
+  font-family: "HelveticaNeueBold";
+  font-size: 14px;
+  font-weight: bolder;
+  color: #fff;
+  letter-spacing: 1px;
+}
