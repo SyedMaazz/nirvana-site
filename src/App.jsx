@@ -1,4 +1,5 @@
 import Discography from './Discography.jsx'
+import Merch from './Merch.jsx'
 import Footer from './footer.jsx'
 import Header from './header.jsx'
 
@@ -7,6 +8,7 @@ function App() {
     <>
       <Header />
       <Discography />
+      <Merch/>
       <Footer />
    </>
   )
