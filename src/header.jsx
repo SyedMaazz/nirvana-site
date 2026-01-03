@@ -1,4 +1,4 @@
-import bgVideo from "./assets/videos/nirvana-bg.mp4";
+import bgVideo from "./assets/bg-videos/nirvana-bg.mp4";
 import nirvanaLogo from "./assets/logo/nirvana_logo.png";
 
 function Header() {
