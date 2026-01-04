@@ -358,3 +358,220 @@ body {
   color: #000;
 }
 
+/* MAILING LIST SECTION */
+
+.mailing-section {
+  position: relative;
+  width: 100%;
+  padding: 150px 0 80px;
+  overflow: hidden;
+}
+
+/* BACKGROUND IMAGE */
+.mailing-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* DARK OVERLAY */
+.mailing-overlay {
+  position: absolute;
+  background: rgba(0, 0, 0, 0);
+}
+
+/* CONTENT */
+.mailing-content {
+  position: relative;
+  max-width: 550px;
+  margin: 0 auto;
+  transform: translateY(-40px);
+  color: #fff;
+}
+
+/* SOCIAL BUTTONS */
+.mailing-socials {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin-bottom: 45px;
+}
+
+/* BASE BUTTON */
+.social-btn {
+  display: flex;
+  align-items: center;
+
+  height: 42px;
+  min-width: 180px;
+
+  border: none;
+  cursor: pointer;
+
+  font-family: "HelveticaNeueMedium", sans-serif;
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  color: #fff;
+}
+
+/* ICON SEGMENT (FIXES WHITE BLOCK) */
+.social-btn img {
+  width: 35px;
+
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 10px;
+
+  margin-right: 40px;
+
+}
+
+/* TEXT ALIGNMENT */
+.social-btn {
+  justify-content: flex-start;
+}
+
+/* FACEBOOK */
+.social-btn.facebook {
+  background-color: #3b5998;
+}
+
+.social-btn.facebook img {
+  background-color: #2e3d5d;
+}
+
+/* GOOGLE */
+.social-btn.google {
+  background-color: #dd4b39;
+}
+
+.social-btn.google img {
+  background-color: #7f362d;
+}
+
+/* YOUTUBE */
+.social-btn.youtube {
+  background-color: #bb0000;
+}
+
+.social-btn.youtube img {
+  background-color: #6e1111;
+}
+
+
+/* FORM */
+.field {
+  margin-bottom: 35px;
+}
+
+.field label {
+  display: block;
+  font-family: "HelveticaNeueLight";
+  font-size: 17px;
+  margin-bottom: 8px;
+}
+
+.field input {
+  width: 100%;
+  background: transparent;
+  border: transparent;
+  border-bottom: 1px solid #aaa;
+  padding: 10px 0;
+  font-size: 17px;
+  outline: none;
+}
+
+/* CUSTOM SELECT */
+.custom-select {
+  position: relative;
+}
+
+.custom-select select {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #aaa;
+  padding: 10px 0;
+  color: #fff;
+  font-size: 17.5px;
+  appearance: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.custom-select::after {
+  content: "▼";
+  position: absolute;
+  right: 25px;
+  top: 12px;
+  font-size: 13px;
+  pointer-events: none;
+}
+
+/* REQUIRED NOTE */
+.required-note {
+  font-size: 15px;
+  font-family: "HelveticaNeueLight";
+  margin: 18px 0;
+}
+
+/* CHECKBOX */
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 15px;
+  font-family: "HelveticaNeueLight";
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  margin-bottom: 26px;
+}
+
+.checkbox input {
+  display: none;
+}
+
+.checkmark {
+  width: 16px;
+  height: 16px;
+  border: 1.6px solid #fff;
+  border-radius: 2px;
+}
+
+.checkbox input:checked + .checkmark {
+  background: #f8b822;
+}
+
+/* LEGAL TEXT */
+.legal-text {
+  font-family: "HelveticaNeueLight";
+  font-weight: 400 !important;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 34px;
+}
+
+/* SUBMIT BUTTON */
+.submit-btn {
+  background: transparent;
+  text-transform: uppercase;
+  border: 1.5px solid #f8b822;
+  color: #f8b822;
+  padding: 10px 20px;
+  font-family: "HelveticaNeueBold";
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+  background: #f8b822;
+  color: #000;
+}
