@@ -31,17 +31,23 @@ function Mailinglist() {
             {/* SOCIAL BUTTONS */}
             <div className="mailing-socials">
               <button className="social-btn facebook">
+                <div className="icon-wrapper">
                 <img src={facebookIcon} alt="Facebook" />
+                </div>
                 <span>FACEBOOK</span>
               </button>
 
               <button className="social-btn google">
+                <div className="icon-wrapper">
                 <img src={googleIcon} alt="Google" />
+                </div>
                 <span>GOOGLE</span>
               </button>
 
-              <button className="social-btn youtube">
+              <button className="social-btn youtube">   
+                <div className="icon-wrapper">
                 <img src={youtubeIcon} alt="YouTube" />
+                </div>
                 <span>YOUTUBE</span>
               </button>
             </div>

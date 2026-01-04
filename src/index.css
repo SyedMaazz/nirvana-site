@@ -403,34 +403,34 @@ body {
 .social-btn {
   display: flex;
   align-items: center;
-
-  height: 42px;
-  min-width: 180px;
-
+  height: 40px;
+  width: 175px;
   border: none;
-  cursor: pointer;
-
-  font-family: "HelveticaNeueMedium", sans-serif;
-  font-size: 12px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-
+  border-radius: 2px;
+  cursor: pointer; 
   color: #fff;
+  font-family: "HelveticaNeueMedium", sans-serif;
+  font-size: 13px;
 }
+
+.icon-wrapper {
+  width: 35px;
+  height: 100%;
+  display: flex;
+  margin-right: 35px;
+}
+
 
 /* ICON SEGMENT (FIXES WHITE BLOCK) */
 .social-btn img {
   width: 35px;
+  height: 40px;
 
-  height: 100%;
+  padding: 8px;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  /* margin-right: 40px; */
 
-  padding: 10px;
-
-  margin-right: 40px;
+  filter: brightness(0) invert(1);
 
 }
 
@@ -439,13 +439,19 @@ body {
   justify-content: flex-start;
 }
 
+.social-btn .btn-text {
+  flex-grow: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* padding: 10px 15px; */
+  text-align: center;
+}
+
 /* FACEBOOK */
 .social-btn.facebook {
   background-color: #3b5998;
-}
-
-.social-btn.facebook img {
-  background-color: #2e3d5d;
 }
 
 /* GOOGLE */
@@ -453,16 +459,23 @@ body {
   background-color: #dd4b39;
 }
 
-.social-btn.google img {
-  background-color: #7f362d;
-}
-
 /* YOUTUBE */
 .social-btn.youtube {
   background-color: #bb0000;
 }
 
-.social-btn.youtube img {
+/* Facebook */
+.social-btn.facebook .icon-wrapper {
+  background-color: #2e3d5d;
+}
+
+/* Google */
+.social-btn.google .icon-wrapper {
+  background-color: #7f362d;
+}
+
+/* YouTube */
+.social-btn.youtube .icon-wrapper {
   background-color: #6e1111;
 }
 
