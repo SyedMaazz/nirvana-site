@@ -397,6 +397,7 @@ body {
   justify-content: center;
   gap: 6px;
   margin-bottom: 45px;
+
 }
 
 /* BASE BUTTON */
@@ -410,7 +411,7 @@ body {
   cursor: pointer; 
   color: #fff;
   font-family: "HelveticaNeueMedium", sans-serif;
-  font-size: 13px;
+  font-size: 12px;
 }
 
 .icon-wrapper {
@@ -428,26 +429,21 @@ body {
 
   padding: 8px;
 
-  /* margin-right: 40px; */
-
   filter: brightness(0) invert(1);
 
 }
 
 /* TEXT ALIGNMENT */
-.social-btn {
-  justify-content: flex-start;
-}
 
-.social-btn .btn-text {
-  flex-grow: 1;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* .social-btn .btn-text { */
+  /* flex-grow: 1; */
+  /* height: 100%; */
+  /* display: flex; */
+  /* align-items: center; */
+  /* justify-content: center; */
   /* padding: 10px 15px; */
-  text-align: center;
-}
+  /* text-align: center; */
+/* } */
 
 /* FACEBOOK */
 .social-btn.facebook {
@@ -488,7 +484,7 @@ body {
 .field label {
   display: block;
   font-family: "HelveticaNeueLight";
-  font-size: 17px;
+  font-size: 16px;
   margin-bottom: 8px;
 }
 
@@ -496,10 +492,14 @@ body {
   width: 100%;
   background: transparent;
   border: transparent;
-  border-bottom: 1px solid #aaa;
+  border-bottom: 1px solid #ffffff;
   padding: 10px 0;
   font-size: 17px;
   outline: none;
+}
+
+.field input::placeholder {
+  color: #ffffff;         
 }
 
 /* CUSTOM SELECT */
@@ -511,10 +511,10 @@ body {
   width: 100%;
   background: transparent;
   border: none;
-  border-bottom: 1px solid #aaa;
+  border-bottom: 1px solid #ffffff;
   padding: 10px 0;
   color: #fff;
-  font-size: 17.5px;
+  font-size: 18px;
   appearance: none;
   outline: none;
   cursor: pointer;
@@ -523,7 +523,7 @@ body {
 .custom-select::after {
   content: "▼";
   position: absolute;
-  right: 25px;
+  right: 12px;
   top: 12px;
   font-size: 13px;
   pointer-events: none;
@@ -569,7 +569,11 @@ body {
   font-weight: 400 !important;
   font-size: 16px;
   line-height: 1.5;
-  margin-bottom: 34px;
+  text-align: center;
+  margin: 0 auto 34px;
+  color: #fff;
+  max-width: 580px;
+  letter-spacing: 1px;
 }
 
 /* SUBMIT BUTTON */
