@@ -219,11 +219,10 @@ body {
   object-fit: contain;
   transform: scaleX(1);
 }
-
 /* MERCH SECTION */
 .merch-section {
   background-color: #000;
-  padding: 9.5px 20px 24px; /* CRITICAL: official spacing */
+  padding: 9.5px 20px 24px;
 }
 
 /* MERCH GRID */
@@ -240,12 +239,63 @@ body {
   text-align: center;
 }
 
+/* IMAGE WRAPPER */
+.merch-image-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
 /* MERCH IMAGE */
-.merch-item img {
+.merch-image-wrapper img {
   max-width: 340px;
   width: 100%;
   height: auto;
   display: block;
+  transition: filter 0.35s ease;
+}
+
+/* DIM IMAGE ON HOVER */
+.merch-item:hover .merch-image-wrapper img {
+  filter: brightness(0.35);
+}
+
+/* OVERLAY */
+.merch-overlay {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 50px;
+
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+/* SHOW OVERLAY */
+.merch-item:hover .merch-overlay {
+  opacity: 1;
+}
+
+/* SHOP NOW BUTTON */
+.shop-now-btn {
+  background: transparent;
+  border: 1.5px solid #f8b822;
+  color: #f8b822;
+
+  padding: 7px 18px;
+  font-family: "HelveticaNeueBold";
+  font-size: 14px;
+  text-transform: uppercase;
+
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.shop-now-btn:hover {
+  background: #f8b822;
+  color: #000;
 }
 
 /* MERCH TITLE */
@@ -257,6 +307,7 @@ body {
   text-transform: uppercase;
   margin-bottom: 5px;
   font-weight: 250 !important;
+  transition: opacity 0.35s ease;
 }
 
 /* MERCH PRICE */
@@ -266,7 +317,15 @@ body {
   font-weight: bolder;
   color: #fff;
   letter-spacing: 1px;
+  transition: opacity 0.35s ease;
 }
+
+/* FADE TEXT ON HOVER */
+.merch-item:hover .merch-title,
+.merch-item:hover .merch-price {
+  opacity: 0.35;
+}
+
 /* ========================= */
 /* VIDEOS SECTION */
 /* ========================= */
