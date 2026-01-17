@@ -592,3 +592,48 @@ body {
   background: #f8b822;
   color: #000;
 }
+
+/* FOOTER */
+
+.site-footer {
+  background: #000;
+  height: 135px;              
+  display: flex;
+  align-items: center;         
+  justify-content: center;     
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+
+  font-family: "HelveticaNeueLight", sans-serif;
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  margin-left: 19px;
+
+  color: #5d5d5d;
+}
+
+.footer-content span {
+  cursor: pointer;
+}
+
+.footer-content .cookie-choices {
+  color: #fff;
+}
+
+
+.footer-content span:not(.cookie-choices):hover {
+  color: #f8b822;
+  transition: color 0.35s ease;
+}
+
+.footer-content .cookie-choices:hover {
+  color: rgba(134, 124, 124, 0.8);
+  transition: color 0.5s ease;
+}
+
