@@ -1,10 +1,16 @@
-import mailingbg from "./assets/bg-mailing/mailing-list-bg-image.jpg";
+import { useState } from "react";
 
+import mailingbg from "./assets/bg-mailing/mailing-list-bg-image.jpg";
 import facebookIcon from "./assets/svg/facebook-svgrepo-com.svg";
 import googleIcon from "./assets/svg/google-svgrepo-com.svg";
 import youtubeIcon from "./assets/svg/youtube-icon-logo-svgrepo-com.svg";
 
 function Mailinglist() {
+  const [countryOpen, setCountryOpen] = useState(false);
+  const [selectedCountry, setSelectedCountry] = useState("Select...");
+
+  const countries = ["United States", "India", "United Kingdom"];
+
   return (
     <>
       {/* MAILING LIST STRIP */}
@@ -26,27 +32,26 @@ function Mailinglist() {
 
         {/* CONTENT */}
         <div className="mailing-content">
-          {/* INNER WRAPPER (for vertical positioning control) */}
           <div className="mailing-inner">
             {/* SOCIAL BUTTONS */}
             <div className="mailing-socials">
               <button className="social-btn facebook">
                 <div className="icon-wrapper">
-                <img src={facebookIcon} alt="Facebook" />
+                  <img src={facebookIcon} alt="Facebook" />
                 </div>
                 <span>FACEBOOK</span>
               </button>
 
               <button className="social-btn google">
                 <div className="icon-wrapper">
-                <img src={googleIcon} alt="Google" />
+                  <img src={googleIcon} alt="Google" />
                 </div>
                 <span>GOOGLE</span>
               </button>
 
-              <button className="social-btn youtube">   
+              <button className="social-btn youtube">
                 <div className="icon-wrapper">
-                <img src={youtubeIcon} alt="YouTube" />
+                  <img src={youtubeIcon} alt="YouTube" />
                 </div>
                 <span>YOUTUBE</span>
               </button>
@@ -59,15 +64,37 @@ function Mailinglist() {
                 <input type="email" placeholder="Email Address" />
               </div>
 
+              {/* CUSTOM COUNTRY SELECT */}
               <div className="field">
                 <label>* Choose Country</label>
-                <div className="custom-select">
-                  <select>
-                    <option>Select...</option>
-                    <option>United States</option>
-                    <option>India</option>
-                    <option>United Kingdom</option>
-                  </select>
+
+                <div
+                  className={`custom-select ${
+                    countryOpen ? "open" : ""
+                  }`}
+                >
+                  <div
+                    className="select-trigger"
+                    onClick={() => setCountryOpen(!countryOpen)}
+                  >
+                    {selectedCountry}
+                    <span className="select-arrow">▼</span>
+                  </div>
+
+                  <div className="select-dropdown">
+                    {countries.map((country) => (
+                      <div
+                        key={country}
+                        className="select-option"
+                        onClick={() => {
+                          setSelectedCountry(country);
+                          setCountryOpen(false);
+                        }}
+                      >
+                        {country}
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
 
@@ -80,10 +107,10 @@ function Mailinglist() {
               </label>
 
               <p className="legal-text">
-                Emails will be sent by or on behalf of Universal Music Group, 2220
-                Colorado Avenue, Santa Monica, CA 90404. (310) 865-4000. You may
-                withdraw your consent at any time. Privacy Policy / Do Not Sell
-                My Personal Information
+                Emails will be sent by or on behalf of Universal Music Group,
+                2220 Colorado Avenue, Santa Monica, CA 90404. (310) 865-4000.
+                You may withdraw your consent at any time. Privacy Policy / Do
+                Not Sell My Personal Information
               </p>
 
               <button type="submit" className="submit-btn">
